@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="css/project_page.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="libraries/slick/slick/slick.min.js"></script>
+<script type="text/javascript" src="libraries/slick/slick/init.js"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<script src="js/jquery.magnific-popup.js"></script>
+<html>
+ <head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="libraries/slick/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="libraries/slick/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="shortcut icon" href="img/favicon.png">
+  <title>David Griggs</title>
+ </head>
+ <body>
+	<div id="content-container">
+		<a id="back" href="index.html">&#8592;</a>
+				
+		<div class="vid-horiz">
+			<iframe width="720" height="420" src="https://www.youtube.com/embed/aU-s0nf6n20?rel=0&amp;showinfo=0&amp;start=63&end=99" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<h1>Escape Rooms, Louisiana</h1>
+		<h5 style="margin-top: -30px; margin-bottom: 30px;">13th Gate Escape</h5>
+		<h3>Placing Vases</h3>
+		<p>
+			I constructed and programmed a network of ten RFID reader chips for less than $100 to check the order of ten colored vases against a solution key, all fitting within a slim 1/2" form factor. In trying to network all ten cheaply-made RFID readers to a single MCU (microcontroller), I discovered that their SS (slave select) pins were not functional. I pivoted, wiring a seperate MCU to each RFID reader, then networking them to a single master detecting ten correct/incorrect parallel status bits.
+		</p>	
+		<p>
+			I later devised an alternative solution with custom code using multiplexers for each data line to allow up to sixteen RFID readers to report to a single MCU, which greatly reduced project complexity and cost. I shared my solution and hacked code on GitHub, and as a result a new friend in Berlin owes me dinner, and I have recently started collaborating on an impressive device called <a href="readread.html">The Read Read</a>.
+		</p>
+		<div class="text_img">
+			<a class="popup-link" title="Testing the hard-wired network. LEDs turn off only when correct vase is placed" href="img/create/escape_room_br/vase_testing.jpg"><img style="width: 20%;" src="img/create/escape_room_br/vase_testing.jpg"></a>
+			<a class="popup-link" title="Testing the full solution key" href="img/create/escape_room_br/vase_final.jpg"><img style="width: 63.3%;" src="img/create/escape_room_br/vase_final.jpg"></a>
+			<figcaption>Left: Network testing with debug LEDs. Right: Testing solution key.</figcaption>
+		</div>
+		<h3>Stepping Stones</h3>
+		<p>
+			I wired and programmed a trick floor with thirty-six individual pressure-sensing stepping stones. Other workers crafted the stones themselves. I designed the spring suspension and pressure switch system, tuning each stone to preserve realism (stones with springs that are too long oscillate and feel fake) while maintaining reliability (springs that are too short over time allow the stone to rest on the switch, causing false triggers). I wrote code to require an exact sequence of solution stones. With each wrong step, the puzzle resets, and the ceiling lowers, inching closer to "crushing" anyone inside (of course it stops at a safe distance).
+		</p>
+		<div class="text_img">
+			<a class="popup-link" title="Wiring the stepping stones" href="img/create/escape_room_br/stepping_stones.jpg"><img style="width: 80%;" src="img/create/escape_room_br/stepping_stones.jpg"></a>
+			<figcaption>Wiring the stepping stones.</figcaption>
+		</div>
+	</div>
+ </body>
+</html>

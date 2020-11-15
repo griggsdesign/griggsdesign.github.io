@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="css/project_page.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="libraries/slick/slick/slick.min.js"></script>
+<script type="text/javascript" src="libraries/slick/slick/init.js"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<script src="js/jquery.magnific-popup.js"></script>
+<html>
+ <head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="shortcut icon" href="img/favicon.png">
+  <title>David Griggs</title>
+ </head>
+ <body>
+	<div id="content-container">
+		<a id="back" href="index.html">&#8592;</a>
+		<div class="vid-horiz">
+			<iframe width="720" height="405" src="https://www.youtube.com/embed/hkSR9iI60WY?rel=0;&autoplay=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<figcaption>One of many instruments my Smart Press helped create (headphones recommended).</figcaption>
+		<h1>Smart Press</h1>
+		<p>
+			How does one create a more intuitive, time-saving 50-ton press? Together with my client, we set the criteria and scoped the project:
+		</p>
+		<ul>
+				<li>
+					Complete precise, customized pressing operations with as little human involvement, and as few operation steps, as possible.
+				</li>
+				<li>
+					Allow the storing of presets for each custom pressing operation.
+				</li> 
+				<li>
+					Use easily-accessed components for ease of repair.
+				</li>
+				<li>
+					Allow manual and automatic operation via foot pedals and/or touchscreen if possible.
+				</li>
+		</ul>
+		<p>
+			I coordinated closely with my client's machinist, who took care of most mechanical operations (hydraulics and pressure/distance/home-switch sensor installation), while I focused on the electrical and programming tasks. 
+		</p>
+		<p>
+			 After estimating that a Raspberry Pi 3 could smoothly handle all required actions simultaneously (run a multi-threaded touchscreen user interface, track up to 2000 interrupts per second, read pressure data), I built a Qt 5 cross-compiling tool chain and set to work teaching myself how to use it.
+		</p>
+		<div class="text_img">
+			<a class="popup-link" title="Software map" href="img/create/smart_press/gui_map.jpg"><img style="width: 43%;" src="img/create/smart_press/gui_map.jpg"></a>
+			<div style="width: 24%; display: inline-block;">
+				<a class="popup-link" title="Menu for selecting preset depth profiles" href="img/create/smart_press/select_from_presets.jpg"><img style="width: 100%;" src="img/create/smart_press/select_from_presets.jpg"></a>
+				<a class="popup-link" title="Menu for setting a custom position target" href="img/create/smart_press/set_custom_target.jpg"><img style="width: 100%;" src="img/create/smart_press/set_custom_target.jpg"></a>
+				<a class="popup-link" title="Menu for manual operation" href="img/create/smart_press/manual_mode.jpg"><img style="width: 100%;" src="img/create/smart_press/manual_mode.jpg"></a>
+			</div>
+			<figcaption>Left: Software Map. Right (top to bottom): Select from Presets, Set Custom Target, Manual Mode.</figcaption>
+		</div>
+		<p>
+			With the GUI mocked up, I tested each component to ensure compatibility with my C++/QML code and the RPi 3 hardware before committing to a final, soldered system. Once the low voltage components were soldered and functioning, I installed the high voltage AC power circuitry, carefully routed to minimize electromagnetic interference.
+		</p>
+		<div class="text_img">
+			<a class="popup-link" title="Low voltage enclosure" href="img/create/smart_press/control_box.jpg"><img style="width: 40%;" src="img/create/smart_press/control_box.jpg"></a>
+			<a class="popup-link" title="High voltage enclosure" href="img/create/smart_press/relay_power_box.jpg"><img style="width: 47%;" src="img/create/smart_press/relay_power_box.jpg"></a>
+			<figcaption>Left: Low voltage control enclosure. Right: High voltage enclosure.</figcaption>
+		</div>
+		<div class="text_img">
+			<a class="popup-link" title="Press nearing completion" href="img/create/smart_press/fullview.jpg"><img style="width: 40%;" src="img/create/smart_press/fullview.jpg"></a>
+			<figcaption>Full view of press nearing completion.</figcaption>
+		</div>	
+		<p>
+			After finishing the build, I worked with the intended users of this machine to ensure each interaction was optimized for each use case. We practiced every possible use of the GUI and made some minor changes in button size/location to suit the user's needs.
+		</p>
+		<p>
+			The final product worked as predicted, and was completed in just five weeks. In that time I was able to quickly teach myself Qt 5, multi-class C++ programming, and multi-threaded GUI development. I learned valuable skills in software development, data handling, troubleshooting/debugging, and project planning. I developed a complex device from scratch and exercised my understanding of human-computer interaction, all while furthering the cutting edge of a beautiful musical instrument I love.
+		</p>
+	</div>
+ </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="css/project_page.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="libraries/slick/slick/slick.min.js"></script>
+<script type="text/javascript" src="libraries/slick/slick/init.js"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<script src="js/jquery.magnific-popup.js"></script>
+<html>
+ <head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="shortcut icon" href="img/favicon.png">
+  <audio id="r2_yell_file" src="audio/r2_yell.mp3"></audio>
+  <title>David Griggs</title>
+ </head>
+ <body>
+	<div id="content-container">
+		<a id="back" href="index.html">&#8592;</a>
+		<div class="vid-horiz">
+			<iframe width="720" height="405" src="https://www.youtube.com/embed/eIJ207K6nCM?rel=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+		</div>
+		<h1>RC-R2D2</h1>
+		<p>
+			In 2015 my talented friend Barton Gilley asked me to take his R2D2 to the next level. He had improvised rudimentary electronics to produce random lights, sounds, and head movements and, more importantly, equipment to automatically serve beer from a keg hidden inside R2's conveniently-shaped body. My task was to give life to the two foot motors Barton had installed, and give the driver control over the swiveling head and sound system.
+		</p>
+		<p>
+			We made a list of desired features in order of increasing cost/difficulty, stepping up R2's performance incrementally in our free time. First, I brought order to the electronic rat's nest and bought components to allow motors (two in the feet, one to rotate the head), sounds, and beer tap to all be controlled by one Arduino. In order to make the remote controller as small and inconspicuous as possible, I devised a smooth, intuitive single-joystick driving algorithm (as opposed to the "tank tread" method). Buttons give the driver access to sounds on command, with of course one button dedicated to everyone's favorite <a id="r2_yell" href="javascript:;">Yell</a>, and a second joystick controls head movement. Control of the head and sounds allows the driver to direct R2's attention toward individuals and heighten the robot's emotional connection to its fans.
+		</p>
+		<script>
+			document.getElementById("r2_yell").addEventListener("click", function() {
+				document.getElementById("r2_yell_file").pause();
+				document.getElementById("r2_yell_file").currentTime = 0;
+				document.getElementById("r2_yell_file").play();
+			})
+		</script>
+		<p>
+			After testing the driving experience on a typical, bulky RC controller, I created a miniature single-handed controller, hollowing out a Wii Nunchuk with just enough room for an Xbee, two joysticks, five buttons, and a battery tested to last up to twelve hours on a single charge.
+		</p>
+		<div class="text_img">
+			
+			<div style="width: 30%; display: inline-block;">
+				<a class="popup-link" title="Initial fit test" href="img/create/r2d2/nunchuck_fittest.jpg"><img style="width: 100%;" src="img/create/r2d2/nunchuck_fittest.jpg"></a>
+				<figcaption>Initial fit test.</figcaption>
+			</div>
+			<div style="width: 30%; display: inline-block;"> 
+				<a class="popup-link" title="First data stream" href="img/create/r2d2/nunchuck_data.jpg"><img style="width: 100%;" src="img/create/r2d2/nunchuck_data.jpg"></a>
+				<figcaption>First data stream!</figcaption>
+			</div>	
+		</div>
+		<figure class="text_img">
+			<a class="popup-link" title="Final controller design" href="img/create/r2d2/nunchuck_final.jpg"><img style="width: 50%;" src="img/create/r2d2/nunchuck_final.jpg"></a>
+			<figcaption>Final controller design.</figcaption>
+		</figure>
+		<p>
+			Finally, I designed a 3D-printed mount for the beer tap auto-pour sensor, directing its detection path for optimal actuation timing (opening the tap too early or closing it too late results in spilled liquid).
+		</p>
+		<div class="text_img">
+			<a class="popup-link" title="Arm extended with 3D-printed sensor mount" href="img/create/r2d2/tap_new.png"><img style="width: 40%;" src="img/create/r2d2/tap_new.png"></a>
+			<figcaption>Arm extended with black sensor mount.</figcaption>
+		</div>
+		<h5>Future Work</h5>
+		<p>
+			The next challenge will be to automatically extend and retract the beer tap arm. I have already designed a servo-driven door to hide the stored arm. I plan to create a high-torque lifter for the arm itself whenever I am next able to visit my friend and his R2D2. 
+		</p>
+		<div class="text_img">
+				<div style="width: 43.8%; display: inline-block;">
+					<a class="popup-link" title="Prototype door hinge motion study" href="img/create/r2d2/Hinge_GIF.gif"><img style="width: 100%;" src="img/create/r2d2/Hinge_GIF.gif"></a>
+					<figcaption>Prototype door hinge motion study.</figcaption>
+				</div>
+				<div style="width: 40%; display: inline-block;"> 
+					<a class="popup-link" title="Geometry study to determine the chamfer needed to avoid material collision" href="img/create/r2d2/Hinge_prototype_1.png"><img style="width: 100%;"src="img/create/r2d2/Hinge_prototype_1.png"></a>
+					<figcaption>Min chamfer needed to avoid collision.</figcaption>
+				</div>	
+		</div>
+		<figure class="text_img">
+				<a class="popup-link" title="Preliminary design sketch" href="img/create/r2d2/arm_sketch.jpg"><img style="width: 60%;" src="img/create/r2d2/arm_sketch.jpg"></a>
+			<figcaption>Rough sketch of one design idea to raise/lower the arm.</figcaption>
+		</figure>
