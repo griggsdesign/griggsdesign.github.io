@@ -10,7 +10,7 @@ body {
 #intro-container {
   position: fixed;
   width: 100%;
-  background: url("http://localhost/DAG/img/snow.png");
+  background: url("/img/snow.png");
   height: 100vh;
   z-index: 2;
 }
