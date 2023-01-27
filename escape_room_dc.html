@@ -25,7 +25,7 @@
 		<h5 style="margin-top: -30px; margin-bottom: 30px;">Escape Room Live Georgetown</h5>
 		<figcaption style="margin-top: -30px;"><a href="https://theescapegame.com/dc/" style=" text-decoration: none;">Client Website</a></figcaption>
 		<p>
-			The following are two of the forty-plus electromechanical props I created for four new movie-themed escape room environments. I was given five months to design, build, install, and troubleshoot everything, without knowing the exact layout of the rooms until the installation phase. In order to keep so many projects moving in parallel, I kept a master list of every prop with details of current progress, problems to be solved, and (during installation) a to-do list of collaborations with skilled craftsmen required to modify the built environment to my needs. I constantly reorganized my task list around the shifting availability of electricians and woodworkers, and solved numerous design conflicts encountered while fitting my devices into the rooms they constructed. In the end, the venue opened as planned and has enjoyed massive success as one of the top-rated entertainment venues in Washington, D.C.
+			The following are two of the 40+ electromechanical props I created for four new movie-themed escape room environments. I was given five months to design, build, install, and troubleshoot everything, without knowing the exact layout of the rooms until the installation phase. In order to keep so many projects moving in parallel, I kept a master list of every prop with details of current progress, problems to be solved, and (during installation) a to-do list of collaborations with skilled craftsmen required to modify the built environment to my needs. I constantly reorganized my task list around the shifting availability of electricians and woodworkers, and solved numerous design conflicts encountered while fitting my devices into the rooms they constructed. In the end, the venue opened as planned and has enjoyed massive success as one of the top-rated entertainment venues in Washington, D.C.
 		</p>
 		
 		<h3>Living Pedestal</h3>
@@ -34,7 +34,7 @@
 			<iframe width="720" height="405" src="https://www.youtube.com/embed/7qEHfwIuAfc?rel=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 		</div>
 		<p>
-			I was tasked with creating a pedestal with a secret compartment which only opens when four correct glyphs are simultaneously touched. Rather than producing the static puzzle box my clients expected, I decided to add a strong visual interaction to the experience. I pushed the limits of the Arduino with thirty-six capacitance sensor channels synchronized with thirty-six channels of LED control. I tested via breadboard to confirm that a single Arduino Uno can handle the I/O rates required for seamless LED color touch response. 
+			Task: create a pedestal with a secret compartment which only opens when four correct glyphs are simultaneously touched. Rather than producing the static puzzle box my clients expected, I decided to add a strong visual interaction to the experience. I pushed the limits of the Arduino with thirty-six capacitance sensor channels synchronized with thirty-six channels of LED control. I tested via breadboard to confirm that a single Arduino Uno can handle the I/O rates required for seamless LED color touch response. 
 		</p>
 		<p>
 			I designed and built every mechanical and electrical aspect of the pedestal from frame construction through glyph design, CNC toolpaths and routing, and wiring to the final assembly of copper electrodes, LED diffusing backplates, and LED fixtures. 
@@ -67,32 +67,32 @@
 			<figcaption>Left: Foundation of internal wiring prepared to optimize the chaos of external wires. Right: The resulting chaos.</figcaption>	
 		</div>
 		<p>
-			Unlike in the movies, we could not risk letting customers pick up these expensive props to store trapped ghosts in the final Ecto Containment Unit. Instead, I created a "ghost cube" for each trap that would represent the trapped entity, only to be released from the trap once a puzzle has been solved. Customers win the game when all three ghost cubes are locked away, saving the city. I had to design an entirely new component to dispense these cubes autonomously. 
+			Unlike in the movies, we could not risk letting customers pick up these expensive props to store trapped ghosts in the final Ecto Containment Unit. Instead, I created a "ghost cube" for each trap that would represent the trapped entity, only to be released from the trap once a puzzle has been solved. Customers win the game when all three ghost cubes are locked away, saving the city. I had to design an entirely new system to dispense these cubes autonomously from each ghost trap. 
 		</p>
 		<p>
-			I scrutinized this unique interaction between human and machine, and designed a magnetically closed door with shrouded edges that is near-impossible to open from the outside (no easy method to pry the door open prematurely), and yet easy to open from the inside (ensuring that the cube would be successfully ejected every time). I embedded a magnet in all six faces of each cube, so that no matter their orientation the dispenser tray could hold it steady, and the final Ecto Containment Unit could register three cubes (via three magnetic switches in series), and trigger the end-game sequence.
+			I scrutinized this unique interaction between human and machine and landed on two crucial design requirements: 1) prevent users from obtaining the ghost cubes prematurely, and 2) ensure successful cube ejection every time the puzzles are solved. I carefully designed a 3D printed housing for the cubes that blended seamlessly in with the trap body. I designed the ejection door with an internal hinge and recessed outer edges that could not be pried open from the outside. I added a protrusion to the front of each cube tray to ensure the doors are pushed open at the location of greatest mechanical advantage (opposite the hinge). Finally, I embedded magnets in all six faces of each cube, so that no matter their orientation the dispenser tray could hold it steady, and the final Ecto Containment Unit could register three cubes (via three magnetic switches in series), and trigger the end-game sequence.
 		</p>
 		<div class="text_img">
 			<a class="popup-link" title="Overall design of cube dispenser" href="img/create/escape_room_dc/cube_dispenser.jpg"><img style="width: 49%;" src="img/create/escape_room_dc/cube_dispenser.jpg"></a>	
 			<a class="popup-link" title="Underside of sliding tray" href="img/create/escape_room_dc/cube_tray.jpg"><img style="width: 49%;" src="img/create/escape_room_dc/cube_tray.jpg"></a>	
 			<figcaption>
-				Left: Overall design of cube dispenser. Right: Underside of sliding tray, with a small magnet locator in the center, a hole to attach the servo horn in the back, and a protrusion on the front to ensure the door is pushed open at the location of greatest mechanical advantage.
+				Left: Overall design of cube dispenser. Right: Underside of sliding tray, with a small magnet locator in the center, a hole to attach the servo horn in the back, and a protrusion on the front to push open the door at the location of greatest mechanical advantage.
 			</figcaption>
 		</div>
 		<div class="vid-horiz">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/DZP7EG1dS1U?rel=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 		</div>
 		<figcaption>
-			Testing railway wear and tear as well as the ease of use of the magnet guidance system.
+			Testing rail wear and tear as well as the ease of use of the magnet guidance system.
 		</figcaption>
 		<p>
-			In just two work days, I had designed an assembly from scratch, tested tolerances and fits, 3D printed parts, devised a linkage system using two custom-shaped servo horns, and built three identical systems. The resulting full experience of solving a puzzle to trap a ghost and retrieve his essence in a cube is shown below.
+			In just two work days, I had designed an assembly from scratch, tested tolerances and fits, 3D printed parts, devised a linkage system using two hand-shaped servo horns, and built three identical functioning systems. The resulting full experience of solving a puzzle to trap a ghost and retrieve their essence in a cube is shown below.
 		</p>
 		<div class="vid-vert">
 			<iframe width="380" height="580" src="https://www.youtube.com/embed/f9TDn2C9ypk?rel=0&amp;showinfo=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 		</div>		
 		<figcaption>
-			Final test sequence with CGI screen audio disabled.
+			Final test sequence with CGI audio disabled.
 		</figcaption>
 	</div>
  </body>
