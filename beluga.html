@@ -24,7 +24,7 @@
 		<p>
 			Respiratory failure is the #1 cause of pediatric mortality worldwide, and the #1 cause of adult mortality in low-income countries (WHO 2016). Ventilators are the most effective way to combat respiratory failure and save millions of lives. So, why don't we distribute ventilators worldwide to address the issue?
 		</p>
-		<h6><b>The Problem:</b></h6>
+		<p><b>The Problem:</b></p>
 		<ul>
 			<li>Most ventilators are simply unaffordable ($15,000-$60,000 each) where they are most needed in low-resource environments</li>
 			<li>Training staff to use a diverse array of donated equipment is difficult</li>
@@ -34,7 +34,7 @@
 			<a class="popup-link" title="Medical equipment waste" href="img/create/beluga/concept.jpg"><img style="width: 75%;" src="img/create/beluga/ventilatorWaste.png"></a>
 			<figcaption>Medical equipment dumping ground in Malawi. Photo credit: Stephen Rudy</figcaption>
 		</div>
-		<h6><b>Our Solution:</b></h6>
+		<p><b>Our Solution:</b></p>
 		<ol>
 			<li>Design a new ventilator for minimal cost and complexity</li>
 			<li>Send prototypes to our academic partners in Uganda to test design assumptions and map market stakeholders</li>
@@ -96,7 +96,7 @@
 		<div class="text_img">
 			<a class="popup-link" title="Final design concept" href="img/create/beluga/concept_animation.gif"><img style="width: 80%;" src="img/create/beluga/concept_animation.gif"></a>
 		</div>
-		<h6><b>User Interface</b></h6>
+		<p><b>User Interface</b></p>
 		<p>
 			With ruggedness and simplicity in mind, I decided not to allow any hidden elements (e.g. dropdown menus). Every user input has a well-labeled button with plenty of real estate and a distinct LED to call the user's attention precisely where it was needed at any time. Numerical inputs/outputs have seven-segment displays and a shared dial to select the exact number needed. With a detailed description of the desired ventilation modes from my partners at MGH, I started playing with the layout of the many buttons, numerical displays, and LEDs needed to cover every possible use case. I shared physical printouts and powerpoint slides with colleagues at MGH to elicit feedback on UI layout ideas. After many iterations, I worked with Craig Cheney (a talented volunteer EE) to match the PCB layout to my UI specs, select the right components, and design, assemble, and QA the boards.
 		</p>
@@ -105,34 +105,34 @@
 			<a class="popup-link" title="Final prototype UI layout" href="img/create/beluga/UI_layout.jpg"><img style="width: 42%;" src="img/create/beluga/UI_layout.jpg"></a>
 			<figcaption>Left: UI feedback from a clinician at MGH. Right: photo of final UI layout.</figcaption>
 		</div>
-		<h6><b>Controller</b></h6>
+		<p><b>Controller</b></p>
 		<p>
 			I decided to keep the controller and UI PCBs separate so that the more wear-prone UI board would be cheaper/easier to replace. After many planning meetings to select the right components, Craig took care of PCB design/assembly/QA, and developed about 50% of the firmware needed before handing off to me.
 		</p>
-		<h6><b>Valve Selection Criteria</b></h6>
+		<p><b>Valve Selection Criteria</b></p>
 		<p>
 			Solenoid valves were selected using the below criteria for this prototype.
 		</p>
-		<h6>Safety</h6>
+		<p>Safety</p>
 		<ul>
 			<li>Fail open to allow airflow</li>
 			<li>Wetted parts easily cleaned or cheaply replaced for each patient</li>
 			<li>Does not create harmful pressure transients</li>
 			<li>Attendant can manually actuate device (pinch tubing or override valves manually) while a replacement is swapped</li>
 		</ul>
-		<h6>Reliability</h6>
+		<p>Reliability</p>
 		<ul>
 			<li>For now, at least 4 weeks of MTBF = ~1.5 million open/close cycles</li>
 			<li>Suitable for 100% O2 service and 100% humidity</li>
 		</ul>
-		<h6>Other</h6>
+		<p>Other</p>
 		<ul>
 			<li>Minimal maintenance effort required</li>
 			<li>Max 100 ms actuation time</li>
 			<li>Upstream CV greater than 0.1, downstream CV greater than 2</li>
 			<li>Minimize cost</li>
 		</ul>
-		<h6><b>Enclosure</b></h6>
+		<p><b>Enclosure</b></p>
 		<p>
 			I've experienced enough to know that 'too big' is far better than 'too small', so ample space was planned for all internal components. I decided on a full sheet metal build for durability and design flexibility (minimal tooling costs). PEM fasteners were the star of the show here, allowing for quick easy assembly of most internal components. A recessed front panel shields UI elements from damage should the vent fall on its face. 40mm fan holes and ventilation holes allow for active cooling of the solenoid valves and PCBs. Otherwise, for now we just need a box to look like a vent and act like a vent so we can learn as much as possible. Later designs will consider medical device standards and cater to Uganda's local manufacturing capabilities.
 		</p>
