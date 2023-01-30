@@ -107,6 +107,16 @@ h5 {
   margin-bottom: calc(-1vw + 2px);
 }
 
+h6 {
+  color: #222;
+  font-family: 'Vollkorn','Georgia', 'Times New Roman', Times, serif;
+  text-align: left;
+  font-size: 1.3em;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: -14px;
+}
+
 figcaption {
   color: #222;
   font-family: 'Vollkorn','Georgia', 'Times New Roman', Times, serif;
@@ -172,6 +182,5 @@ figcaption {
   cursor: -moz-zoom-in;
   cursor: zoom-in;
 }
- 
 
  /*# sourceMappingURL= project_page.css.map */

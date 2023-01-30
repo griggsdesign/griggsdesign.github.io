@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="css/project_page.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="libraries/slick/slick/slick.min.js"></script>
+<script type="text/javascript" src="libraries/slick/slick/init.js"></script>
+<script type="text/javascript" src="js/lightbox.js"></script>
+<script src="js/jquery.magnific-popup.js"></script>
+<html>
+ <head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="shortcut icon" href="img/favicon.png">
+  <title>David Griggs</title>
+ </head>
+ <body>
+	<div id="content-container">
+		<a id="back" href="index.html">&#8592;</a>
+		<div class="text_img">
+			<a class="popup-link" title="Medical equipment waste" href="img/create/beluga/beluga_partners.png"><img style="width: 100%;" src="img/create/beluga/beluga_partners.png"></a>
+		</div>
+		<h1>Beluga Bubble Ventilator</h1>
+		<p>
+			Respiratory failure is the #1 cause of pediatric mortality worldwide, and the #1 cause of adult mortality in low-income countries (WHO 2016). Ventilators are the most effective way to combat respiratory failure and save millions of lives. So, why don't we distribute ventilators worldwide to address the issue?
+		</p>
+		<h6><b>The Problem:</b></h6>
+		<ul>
+			<li>Most ventilators are simply unaffordable ($15,000-$60,000 each) where they are most needed in low-resource environments</li>
+			<li>Training staff to use a diverse array of donated equipment is difficult</li>
+			<li>Technical support and maintenance infrastructure for these complex machines is entirely missing, leading to junkyards of broken equipment</li>
+		</ul>
+		<div class="text_img">
+			<a class="popup-link" title="Medical equipment waste" href="img/create/beluga/concept.jpg"><img style="width: 75%;" src="img/create/beluga/ventilatorWaste.png"></a>
+			<figcaption>Medical equipment dumping ground in Malawi. Photo credit: Stephen Rudy</figcaption>
+		</div>
+		<h6><b>Our Solution:</b></h6>
+		<ol>
+			<li>Design a new ventilator for minimal cost and complexity</li>
+			<li>Send prototypes to our academic partners in Uganda to test design assumptions and map market stakeholders</li>
+			<li>Work with local manufacturers/suppliers/regulators to revise design</li>
+			<li>Create training procedures in close partnership with local clinicians</li>
+			<li>Scale: establish pilot partnerships to expand to new low-resource markets</li>
+		</ol>	
+		<h3>Ventilator Conception</h3>	
+		<p>
+			In October of 2019 Gopi Mohan and Ryan Carroll, both clinicians at Massachusetts General Hospital (MGH) at the time, came to me with an interesting concept based on Bubble CPAP, a low-cost technology that has been deployed successfully for decades in both low- and high-resource settings. Bubble CPAP uses a flowmeter to send pressurized breathing air into a tube connected to a patient's airway with its far end submerged in water. The patient's airway and lungs are thus subjected to a constant hydrostatic pressure that makes breathing easier.
+		</p>
+		<p>
+			The Beluga ventilator is simply two bubble CPAP systems in parallel. A valve toggles between a high pressure tube, forcing inspiration, and a low pressure tube, allowing for expiration.
+		</p>
+		<div class="text_img">
+			<a class="popup-link" title="Press nearing completion" href="img/create/beluga/concept.jpg"><img style="width: 70%;" src="img/create/beluga/concept.jpg"></a>
+			<figcaption>Early depiction of the core ventilator concept</figcaption>
+		</div>
+		<h3>Minimum Viable Product</h3>	
+		<p>
+			With less than $100 in parts I was able to quickly assemble and program a "valve timer" of sorts to put our core concept to the test. Each knob controls a two-digit input: "RR" or respiratory rate in breaths per minute; and "IE" or a ratio of inspiration time over expiration time for each breath cycle. These two inputs control a relay which opens and closes a large solenoid valve, as seen in the video below. A separate pressure sensor (Honeywell HSC) was added later to enable "pressure support" mode, where a ventilator syncs its behavior to the patient's attempts at breathing on their own (drawing negative pressure from the airway).
+		</p>
+		<div class="text_img">
+			<a class="popup-link" title="Low voltage enclosure" href="img/create/beluga/mvp_build3.jpg"><img style="width: 35%;" src="img/create/beluga/mvp_build3.jpg"></a>
+			<a class="popup-link" title="High voltage enclosure" href="img/create/beluga/mvp_build4.jpg"><img style="width: 51%;" src="img/create/beluga/mvp_build4.jpg"></a>
+			<figcaption>Cheap valve timer prototype</figcaption>
+		</div>
+		<div class="vid-horiz">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/HCxuAFZUghU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		</div>
+		<figcaption>Demonstration of Minimum Viable Product</figcaption>
+		<h3>Experiments</h3>
+		<p>
+			Gopi and Ryan secured space at a lab at MGH with a typical hospital supply of pressurized breathing air. We used an ASL5000 experimental lung device to capture continuous pressure, flow, and lung volume data. We tested our MVP against a popular ventilator designed for rugged, portable use: the <a href="https://www.zoll.com/products/ventilators/z-vent-for-ems" target="_blank">Zoll Z-vent</a>. Performance was compared for common ventilator modes of operation (forced ventilation, pressure support), and across an array of parameter combinations (pressure setpoints, lung compliance, airway resistance, flow setpoint, RR, IE, etc). Exemplary data is shown below that supports that our cheap device can compete with such a sophisticated ventilator.
+		</p>
+		<div class="text_img">
+			<a class="popup-link" title="Example of Zoll/Beluga comparison data. Faded datapoints correspond to a higher 'airway resistance' setting on the ASL5000." href="img/create/beluga/Figure_3a.png"><img style="width: 100%;" src="img/create/beluga/Figure_3a.png"></a>
+			<figcaption>Example of Zoll/Beluga comparison data. Faded datapoints correspond to a higher 'airway resistance' setting on the ASL5000.</figcaption>
+		</div>
+		<h3>Works-Like Prototype</h3>
+		<p>Our team agreed upon the following priorized requirements for our next prototype:</p>
+		<ol>
+			<li>Minimize cost and complexity</li>
+			<li>Maximize ruggedness and repairability</li>
+			<li>Maximize utility, i.e. cover as many patient pathologies as possible</li>
+		</ol>
+		<p>
+			We had started as small/simple as possible with our MVP: one valve, a controller, a user interface, and an enclosure. What could we add to this to bring the most value to bear with the least negative impact on other more important factors? We practiced using the device, studied existing ventilator designs, consulted with experts at MGH, and came up with the following vital improvements.
+		</p>
+		<ul>
+			<li>Add a second valve upstream of the flowmeter to reduce breathing air usage by 50-80%</li>
+			<li>Add a small orifice bypass to the upstream valve to ensure patient does not rebreathe used air</li>
+			<li>Integrate a pressure sensor to sense patient breathing and greatly expand the utility of the product</li>
+			<li>Include a flowmeter port to enable sophisticated operation algorithms based on the patient's lung expansion/contraction</li>
+		</ul>
+		<p>
+			The basic operation of the device is animated below (minus pressure/flow sensors and bypass orifice).
+		</p>
+		<div class="text_img">
+			<a class="popup-link" title="Final design concept" href="img/create/beluga/concept_animation.gif"><img style="width: 80%;" src="img/create/beluga/concept_animation.gif"></a>
+		</div>
+		<h6><b>User Interface</b></h6>
+		<p>
+			With ruggedness and simplicity in mind, I decided not to allow any hidden elements (e.g. dropdown menus). Every user input has a well-labeled button with plenty of real estate and a distinct LED to call the user's attention precisely where it was needed at any time. Numerical inputs/outputs have seven-segment displays and a shared dial to select the exact number needed. With a detailed description of the desired ventilation modes from my partners at MGH, I started playing with the layout of the many buttons, numerical displays, and LEDs needed to cover every possible use case. I shared physical printouts and powerpoint slides with colleagues at MGH to elicit feedback on UI layout ideas. After many iterations, I worked with Craig Cheney (a talented volunteer EE) to match the PCB layout to my UI specs, select the right components, and design, assemble, and QA the boards.
+		</p>
+		<div class="text_img">
+			<a class="popup-link" title="UI prototype user feedback" href="img/create/beluga/UI Feedback.png"><img style="width: 56%;" src="img/create/beluga/UI Feedback.png"></a>
+			<a class="popup-link" title="Final prototype UI layout" href="img/create/beluga/UI_layout.jpg"><img style="width: 42%;" src="img/create/beluga/UI_layout.jpg"></a>
+			<figcaption>Left: UI feedback from a clinician at MGH. Right: photo of final UI layout.</figcaption>
+		</div>
+		<h6><b>Controller</b></h6>
+		<p>
+			I decided to keep the controller and UI PCBs separate so that the more wear-prone UI board would be cheaper/easier to replace. After many planning meetings to select the right components, Craig took care of PCB design/assembly/QA, and developed about 50% of the firmware needed before handing off to me.
+		</p>
+		<h6><b>Valve Selection Criteria</b></h6>
+		<p>
+			Solenoid valves were selected using the below criteria for this prototype.
+		</p>
+		<h6>Safety</h6>
+		<ul>
+			<li>Fail open to allow airflow</li>
+			<li>Wetted parts easily cleaned or cheaply replaced for each patient</li>
+			<li>Does not create harmful pressure transients</li>
+			<li>Attendant can manually actuate device (pinch tubing or override valves manually) while a replacement is swapped</li>
+		</ul>
+		<h6>Reliability</h6>
+		<ul>
+			<li>For now, at least 4 weeks of MTBF = ~1.5 million open/close cycles</li>
+			<li>Suitable for 100% O2 service and 100% humidity</li>
+		</ul>
+		<h6>Other</h6>
+		<ul>
+			<li>Minimal maintenance effort required</li>
+			<li>Max 100 ms actuation time</li>
+			<li>Upstream CV greater than 0.1, downstream CV greater than 2</li>
+			<li>Minimize cost</li>
+		</ul>
+		<h6><b>Enclosure</b></h6>
+		<p>
+			I've experienced enough to know that 'too big' is far better than 'too small', so ample space was planned for all internal components. I decided on a full sheet metal build for durability and design flexibility (minimal tooling costs). PEM fasteners were the star of the show here, allowing for quick easy assembly of most internal components. A recessed front panel shields UI elements from damage should the vent fall on its face. 40mm fan holes and ventilation holes allow for active cooling of the solenoid valves and PCBs. Otherwise, for now we just need a box to look like a vent and act like a vent so we can learn as much as possible. Later designs will consider medical device standards and cater to Uganda's local manufacturing capabilities.
+		</p>
+		<div class="text_img">
+			<a class="popup-link" title="Testing assembly of 5x enclosures" href="img/create/beluga/assembly3.jpg"><img style="width: 48%;" src="img/create/beluga/assembly3.jpg"></a>
+			<a class="popup-link" title="Full assembly fit test" href="img/create/beluga/enclosureView.jpg"><img style="width: 48%;" src="img/create/beluga/enclosureView.jpg"></a>
+			<figcaption>Assembling the sheet metal enclosures and fit-testing internal assembly</figcaption>
+		</div>
+		<p>
+			I am now finishing the firmware and software development and will be sending out the first complete prototypes soon!
+		</p>
+		<h3>Future Work</h3>
+		<p>
+			Once all 5 prototypes have been assembled, programmed, and tested, I will send out 2x to my MGH collaborators for feedback. Any immediate software/firmware learnings will be fixed before sending 2x units to our collaborators in Uganda. Meanwhile, I will continue to work on a more optimal valve design/selection, including but not limited to the valves shown below.
+		</p>
+		<div class="vid-horiz">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/HYb5QgOyQ2w?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		</div>
+		<figcaption>Valve candidate experiments.</figcaption>
+	</div>
+ </body>
+</html>
